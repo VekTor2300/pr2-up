@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Добавление пользователя</title>
+</head>
+<body>
+<a href="/" style="font-size: 20px">Главное Меню</a>
+<br></br>
+<form th:action = "${'/prepods/add'}" method="post">
+    <input type="text" name="Surname" placeholder="Введите фамилию"><br>
+    <input type="text" name="Name" placeholder="Введите имя"><br>
+    <input type="text" name="MiddleName" placeholder="Введите отчество"><br>
+    <input type="text" name="Predmets" placeholder="Введите предметы"><br>
+    <input type="text" name="Grafic" placeholder="Введите дни работ"><br>
+    <button type="submit">Добавить преподавателя</button>
+</form>
+
+</body>
+</html>
+<style>
+    body {
+        height: 200px;
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+</style>

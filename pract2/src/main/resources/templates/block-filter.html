@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск статьи</title>
+</head>
+<body>
+<a href="/" style="font-size: 20px">Главное Меню</a>
+<h2>Поиск статьи</h2>
+<form method="post" th:action="${'/blog/filter/result'}">
+    <input type="text" name="title">
+    <button type="submit">Найти</button>
+    <div th:each="el : ${result}">
+        <h3 th:text="${el.title}"></h3>
+        <p th:text="${el.anons}"></p>
+        <strong th:text="${el.full_text}"></strong>
+    </div>
+</form>
+</body>
+</html>
+<style>
+    body {
+        height: 200px;
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+</style>

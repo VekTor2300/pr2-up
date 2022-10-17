@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Добавление статьи</title>
+</head>
+<body>
+<a href="/" style="font-size: 20px">Главное Меню</a>
+<br></br>
+<form th:action = "${'/blog/add'}" method="post">
+    <input type="text" name="title" placeholder="Введите название статьи"><br>
+    <input type="text" name="anons" placeholder="Введите анонс статьи"><br>
+    <input type="text" name="full_text" placeholder="Введите текст статьи"><br>
+    <button type="submit">Добавить статью</button>
+</form>
+
+</body>
+</html>
+<style>
+    body {
+        height: 200px;
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+</style>

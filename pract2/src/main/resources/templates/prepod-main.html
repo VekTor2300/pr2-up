@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Преподаватели</title>
+</head>
+<body>
+
+
+<h1>Все преподаватели</h1>
+<a href="/" style="font-size: 20px">Главное Меню</a>
+<a href="/prepods/filter" style="font-size: 20px">Поиск преподавателя</a>
+<a href="/prepods/add" style="font-size: 20px">Добавить преподавателя</a>
+<div th:each="el : ${prepods}">
+    <h2>====================================================================</h2>
+    <h3 th:text="${'ФИО: '+el.getSurname()}" style="display: inline-block;margin-left: 10px"></h3>
+    <h3 th:text="${el.getName()}" style="display: inline-block"></h3>
+    <h3 th:text="${el.getMiddlename()}" style="display: inline-block"></h3>
+    <h4 th:text="${'Предметы: '+el.getItems()}" style="margin-left: 10px"></h4>
+    <h4 th:text="${'Дни работы: '+el.getChart()}" style="margin-left: 10px"></h4>
+</div>
+</body>
+</html>
+<style>
+    body {
+        height: 200px;
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+</style>
